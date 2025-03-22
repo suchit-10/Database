@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Connect to MongoDB Atlas
+
 mongoose.connect('mongodb+srv://Suchit1:SuchitA@clustorone.nc8kx.mongodb.net/Airbnb')
 
 const airbnbSchema = new mongoose.Schema({
@@ -14,10 +14,10 @@ const airbnbSchema = new mongoose.Schema({
     price: Number,
 });
 
-// Create Mongoose Model (explicitly specify collection name)
+
 const AirbnbListing = mongoose.model('AirbnbListing', airbnbSchema, 'ListAirbnb');
 
-// API Endpoint to Retrieve Listings
+
 app.get('/api/airbnb', async (req, res) => {
     try {
         const listings = await AirbnbListing.find();
@@ -29,7 +29,7 @@ app.get('/api/airbnb', async (req, res) => {
     }
 });
 
-// Start Server
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
