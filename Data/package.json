@@ -1,0 +1,18 @@
+{
+  "name": "datatest",
+  "version": "1.0.0",
+  "description": "MongoDB test data",
+  "license": "ISC",
+  "author": "Suchit Gourkhede",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.12.2"
+  }
+}
